@@ -1,0 +1,15 @@
+## Bing
+
+Để tính chữ số cuối cùng của 123232^(694022^140249), chúng ta có thể sử dụng thuật toán được mô tả trong câu trả lời trước đó. Đầu tiên, chúng ta xác định chữ số cuối cùng của cơ số 123232, là 2. Chu kỳ của chữ số cuối cùng của lũy thừa của 2 là [2, 4, 8, 6].
+
+Bây giờ, chúng ta cần tính giá trị của số mũ 694022^140249 (mod 4). Chúng ta có thể làm điều này bằng cách sử dụng thuật toán được mô tả trong câu trả lời trước đó. Đầu tiên, chúng ta xác định chữ số cuối cùng của cơ số 694022, là 2. Chu kỳ của chữ số cuối cùng của lũy thừa của 2 là [2, 4, 8, 6]. Độ dài của chu kỳ này là 4, vì vậy chúng ta có thể giảm số mũ xuống một giá trị nhỏ hơn bằng cách sử dụng phép chia lấy phần dư. Tuy nhiên, thay vì chỉ lấy phần dư khi chia cho 4, chúng ta phải thêm 4 vào kết quả để đảm bảo rằng kết quả không bao giờ bằng 0. Vì vậy, chúng ta tính (140249 % 4) + 4 = 5.
+
+Bây giờ, chúng ta có thể tính giá trị của số mũ (mod 4) bằng cách tính (2^5) % 4 = 0.
+
+Cuối cùng, chúng ta có thể tính chữ số cuối cùng của 123232^(694022^140249) bằng cách sử dụng chu kỳ [2, 4, 8, 6] và lấy phần tử thứ (0 + 1) = 1 trong chu kỳ. Vì vậy, chữ số cuối cùng của 123232^(694022^140249) là 6.
+
+Tôi hy vọng điều này giúp ích cho bạn! Hãy cho tôi biết nếu bạn có bất kỳ câu hỏi nào khác.
+
+
+
+To find the last digit of a large exponential expression like `2^(3^(4^(1^3^5)))`, we can use a technique called modular exponentiation. This involves repeatedly applying Euler's theorem to reduce the exponents modulo `φ(n)` until we obtain a manageable expression. In this case, we want to find the last digit, so we work modulo 10. Since 2 and 10 are coprime, we can apply Euler's theorem with `n = 10` and `a = 2`. We have `φ(10) = 4`, so Euler's theorem yields `2^4 ≡ 1 (mod 10)`. Now, we need to find the remainder of `3^(4^(1^3^5))` when divided by `φ(10) = 4`. Since 3 and 4 are coprime, we can apply Euler's theorem again with `n = 4` and `a = 3`. We have `φ(4) = 2`, so Euler's theorem yields `3^2 ≡ 1 (mod 4)`. Now, we need to find the remainder of `4^(1^3^5)` when divided by `φ(4) = 2`. Since any power of 4 is divisible by 2, we have `4^(1^3^5) ≡ 0 (mod 2)`. Therefore, we can write `3^(4^(1^3^5)) ≡ 3^0 ≡ 1 (mod 4)`. So the remainder of `3^(4^(1^3^5))` when divided by `φ(10) = 4` is also 1. Therefore, we can write `2^(3^(4^(1^3^5))) ≡ 2^1 ≡ 2 (mod 10)`. So the last digit of `2^(3^(4^(1^3^5)))` is 2.
